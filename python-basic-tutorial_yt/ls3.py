@@ -7,6 +7,7 @@ def average_calc(x, y):
 result1, result2 = average_calc(12, 32)
 print(result1, result2)
 
+# クラス
 class Student:
     # イニシャライザー
     def __init__(self, arg_name):
