@@ -44,3 +44,14 @@ for val in x_list:
 x_dict = {'りんご': 150, 'バナナ': 300, 'オレンジ': 100}
 for k, v in x_dict.items():
     print(k, v)
+
+# リスト内包表記
+names = ['斎藤', '山田', '田中']
+Names = [i + 'さん' for i in names]
+print(Names)
+
+arr = [i for i in range(11) if i % 2 == 0]
+print(arr)
+
+arr = ['き' if i%2==1 else i for i in range(11)]
+print(arr)
