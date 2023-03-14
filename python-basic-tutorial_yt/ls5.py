@@ -49,3 +49,53 @@ else:
     print('正常に終了しました')
 finally:
     print('割り算が終了しました。')
+
+
+# タイプアノテーション・・強制力はほとんどない
+
+def total_price_1item(unit_price: int, quantity: int = 1)-> int:
+    total_price = unit_price * quantity
+    return f'{total_price}円'
+
+total_price = total_price_1item(130, 1)
+print(total_price)
+
+
+# datetimeモジュール
+
+from datetime import date
+
+t = date.today()
+print(t)
+
+d = date(2022, 12, 24)
+print(d.weekday())
+
+from datetime import time
+t = time(12, 15, 30, 0)
+print(t)
+
+from datetime import datetime, timedelta
+
+n = datetime.now()
+print(n)
+
+d1 = datetime(2020, 12, 25, 0, 0, 0)
+d2 = datetime(2020, 11, 25, 0, 0, 0)
+result = d1 - d2
+print(result)
+print(result.days) #30
+
+d3 = d1 + timedelta(days=10)
+print(d3)
+
+from datetime import timezone
+
+JST = timezone(timedelta(hours=+9))
+result = datetime(2020, 1, 1, 12, 15, 30, tzinfo=JST)
+print(result)
+
+import jpholiday
+
+holidays = jpholiday.year_holidays(2023)
+print(holidays)
